@@ -18,6 +18,14 @@ const Main = () => {
  
  console.log(movie)
 
+ const truncateString = (str, num) => {
+    if(str?.length > num) {
+        return str.slice(0, num) + '...'
+    } else {
+        return str
+    }
+ }
+
 
   return (
     <div className='w-full h-[550px] text-white' >
@@ -33,6 +41,7 @@ const Main = () => {
                     <button className='border text-white border-gray-300 py-2 px-5 ml-4'>Watch Later</button>
                 </div>
                 <p className='text-gray-300 text-sm'>Released: {movie?.release_date}</p>
+                <p className='w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200'>{truncateString(movie?.overview, 150)}</p>
             </div>
 
         </div>

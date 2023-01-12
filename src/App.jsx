@@ -7,14 +7,14 @@ import Home from './pages/Home'
 function App() {
 
   return (
-    <div>
+    <>
       <AuthContextProvider>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
           </Routes>
       </AuthContextProvider>
-    </div>
+    </>
   )
 }
 

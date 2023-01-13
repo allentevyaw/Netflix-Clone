@@ -3,14 +3,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext' 
 
 const Navbar = () => {
-const {user, loutOut} = UserAuth()
-const navigate = useNa
+const {user, logOut} = UserAuth()
+const navigate = useNavigate()
 
-const handleLout = async () => {
+const handleLogOut = async () => {
 
   try {
     await logOut()
-    
+    navigate('/')
   } catch(error) {
     console.log(error)
   }
@@ -29,10 +29,8 @@ const handleLout = async () => {
               <Link to='/account'> 
                 <button className='text-white pr-4'>Account</button>
               </Link>
-              <Link to='/signup'>
-                <button className='bg-red-600 px-6 py-2 rounded cursor-pointe text-whiter'>
+                <button onClick={handleLogOut} className='bg-red-600 px-6 py-2 rounded cursor-pointe text-whiter'>
                   Logout </button>
-              </Link>
             </div> :
                     <div>
                     <Link to='/login'> 

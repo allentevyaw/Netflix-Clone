@@ -28,7 +28,10 @@ const Login = () => {
   return (
     <>
       <div className='w-full h-screen'>
-      <img className='hidden sm:block absolute w-full h-full object-cover' src='https://assets.nflxext.com/ffe/siteui/vlv3/935156fb-9579-4fc2-ad94-70680402b8ef/47f24d30-4cbd-4d2d-b165-bd00a01f273d/US-en-20230109-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='' />
+      <img 
+      className='hidden sm:block absolute w-full h-full object-cover' 
+      src='https://assets.nflxext.com/ffe/siteui/vlv3/935156fb-9579-4fc2-ad94-70680402b8ef/47f24d30-4cbd-4d2d-b165-bd00a01f273d/US-en-20230109-popsignuptwoweeks-perspective_alpha_website_large.jpg' 
+      alt='' />
       <div className='bg-black/60 fixed top-0 left-0 w-full h-screen'></div>
       <div className='fixed w-full px-4 py-24 z-50'>
         <div className='max-w-[450px] h-[600px] mx-auto bg-black/75 text-white'>

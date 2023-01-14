@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import {FaHeart, FaRegHeart} from 'react-icons/fa'
+import { UserAuth } from '../context/AuthContext'
+import { db } from '../firebase.config'
+import {arrayUnion, doc, updateDoc} from '../firebase'
 
 
 const Movie = ({item}) => {
     const [like, setLike] = useState(false)
+    const [saved, setSaved] = useState(false)
+    const {user} =UserAuth()
+
+    const movieID =doc(db, 'users', `${user?.email}`)
 
 
   return (
